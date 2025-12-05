@@ -8,7 +8,7 @@ const express=require('express')
 
 const app=express()
 
-const url='http://www.guardian.com/uk'
+const url='https://www.theguardian.com/uk-news'
 
 axios(url)
     .then(response=>
@@ -18,7 +18,7 @@ axios(url)
             const $=cheerio.load(html)
             const articles=[]
             
-            $('.fc-item__title',html).each(function () {
+            $('.dcr-mwwxk',html).each(function () {
                 const title=$(this).text()
                 const url=$(this).find('a').attr('href')
                 articles.push({
