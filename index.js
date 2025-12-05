@@ -8,7 +8,7 @@ const express=require('express')
 
 const app=express()
 
-const url='http://www.guardian.co.uk'
+const url='http://www.guardian.com/uk'
 
 axios(url)
     .then(response=>
@@ -28,6 +28,6 @@ axios(url)
 
             })
             console.log(articles)
-        }).catch(err=>conmsole.log(err))
+        }).catch(err=>console.log(err))
 
 app.listen(PORT,()=>console.log(`Server running on port ${PORT}`))
